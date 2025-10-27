@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Time Capsule - Emily's Birthday Web</title>
+    <link rel="stylesheet" href="../Resources/css/style.css">
+</head>
+
+<body>
+    <div id="time-capsule" class="time-capsule-container">
+        <div class="time-capsule-content">
+            <h1 class="time-capsule-title">How long we've been friends for</h1>
+            <div class="timer">
+                <div class="sub-timer">
+                    <h1 id="day" class="digit1">00</h1>
+                    <p class="digit_name">Days</p>
+                </div>
+                <div class="sub-timer">
+                    <h1 id="hr" class="digit">00</h1>
+                    <p class="digit_name">Hours</p>
+                </div>
+                <div class="sub-timer">
+                    <h1 id="min" class="digit">00</h1>
+                    <p class="digit_name">Minutes</p>
+                </div>
+                <div class="sub-timer">
+                    <h1 id="sec" class="digit">00</h1>
+                    <p class="digit_name">Seconds</p>
+                </div>
+            </div>
+            <h2 class="time-capsule-title">(Practically since the womb :3)</h2>
+        </div>
+        <a href="home.html" class="btn btn-return"> ← </a>
+    </div>
+
+    <!--javascript for timer-->
+    <script>
+        var start_mili_sec = new Date("Oct 24, 2003 00:00:00").getTime();
+        function timer() {
+            var now_mili_sec = new Date().getTime();
+            var elapsed_mili_sec = now_mili_sec - start_mili_sec;
+            var elapsed_sec = Math.floor(elapsed_mili_sec / 1000);
+
+            var day = Math.floor(elapsed_sec / (3600 * 24));
+            var hr = Math.floor((elapsed_sec % (3600 * 24)) / 3600);
+            var min = Math.floor((elapsed_sec % 3600) / 60);
+            var sec = Math.floor(elapsed_sec % 60);
+            
+            document.querySelector("#day").innerHTML = day;
+            document.querySelector("#hr").innerHTML = hr;
+            document.querySelector("#min").innerHTML = min;
+            document.querySelector("#sec").innerHTML = sec;
+        }
+
+        setInterval(timer); //can add a "lag" by doing (timer, 1000)
+    </script>
+</body>
+
+</html>

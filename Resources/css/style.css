@@ -1,0 +1,332 @@
+/* Default text color */
+body {
+    color: white;
+}
+
+/*intro page --------------------------------------------------------------------------*/
+
+/*centers intro and nav-bar main content within screen*/
+.intro {
+    display: flex;
+    /*stacks children vertically (fixes line break issue with flex)*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /*or simply choose px number*/
+    height: 100vh;
+    margin: 0;
+}
+
+/*home page ---------------------------------------------------------------------------*/
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/*left-aligns nav-bar-content (buttons) within centered nav-bar container*/
+.nav-bar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*customizes border around nav-bar-content*/
+.nav-bar-content {
+    background: rgba(0, 0, 0, 0.726);
+    border-radius: 10px;
+    padding: 10px;
+    width: 46%;
+    height: 70%;
+}
+
+/*spacing between nav-bar title and buttons*/
+.nav-title {
+    color: white;
+    margin-bottom: 3px;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+}
+
+/*profile page ---------------------------------------------------------------------------*/
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.profile-content {
+    background:rgba(0, 0, 0, 0.726);
+    border-radius: 10px;
+    padding: 10px;
+    width: 46%;
+    height: 70%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.pfp {
+    width: 16.5vw;
+    cursor: pointer;
+    object-fit: cover;
+    margin-top: 5px;
+}
+
+.profile-title {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.info {
+    font-size: 19px;
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+}
+
+/*message page ---------------------------------------------------------------------------*/
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.message-content {
+    background:rgba(0, 0, 0, 0.726);
+    border-radius: 10px;
+    padding: 10px;
+    width: 46%;
+    height: 73%;
+}
+
+.message-title {
+    margin-bottom: 3px;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+}
+
+.message-text {
+    font-size: 19px;
+    width: 100%;
+    max-height: 700px;
+    overflow: auto;
+}
+
+/*responsive camera roll page -------------------------------------------------------------*/
+.camera-roll-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+.camera-roll-content {
+    background: rgba(0, 0, 0, 0.726);
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    max-width: 900px;
+    height: 70%;
+    margin: 0 auto;
+}
+
+.body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.camera-roll-container {
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.camera-roll-content2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+}
+
+.photos {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: .3s ease box-shadow;
+    position: relative;
+}
+
+.photos:hover {
+    box-shadow: 0px 0px 20px 3px #00000042;
+    transform: scale(1.05);
+}
+
+.photos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.camera-roll-title {
+    margin-bottom: 20px;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+}
+
+/*time capsule page ----------------------------------------------------------------------*/
+.time-capsule-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.time-capsule-content {
+    background: rgba(0, 0, 0, 0.726);
+    border-radius: 10px;
+    padding: 10px;
+    width: 46%;
+    height: 70%;
+}
+
+.time-capsule-title {
+    margin-bottom: 3px;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+}
+
+.timer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    height: 50vh;
+}
+
+.sub-timer {
+    width: 220px;
+    border-radius: 20px;
+}
+
+.digit1 {
+    font-size: 28px;
+}
+
+.digit {
+    font-size: 40px;
+}
+
+/*website background ---------------------------------------------------------------------*/
+body {
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-attachment: fixed;
+}
+
+/*custom Button Styles -------------------------------------------------------------------*/
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 9999px;
+}
+
+.btn-1 {
+    border: 2px solid black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: -0.5rem;
+}
+
+.btn-1 {
+    background-color: white;
+    color: black;
+    font-size: 28px;
+}
+
+.btn-1:hover {
+    opacity: 0.8;
+}
+
+.btn-2 {
+    border: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-top: 40px;
+}
+
+.btn-2 {
+    background-color: white;
+    color: black;
+    font-size: 19.5px;
+}
+
+.btn-2:hover {
+    opacity: 0.8;
+}
+
+.btn-return {
+    border: 2px solid black;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.btn-return {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-return:hover {
+    opacity: 0.8;
+}
